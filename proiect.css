@@ -1,0 +1,331 @@
+@font-face 
+{
+    font-family: 'Neuropol';
+    src: url('neuropol.ttf') format('truetype'); 
+}
+
+
+
+body 
+{
+    font-family: Neuropol;
+    font-size: 4vw;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    background-image: url('poze/background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; 
+    max-width: 100%;
+
+    min-height: 95vh;
+    display: flex;
+    flex-direction: column;
+}
+main
+{
+    padding: 10px 0;
+    font-size: 2.5vw;
+}
+header 
+{
+    background-color: #933fca58;
+    color: #fff;
+    padding: 10px 0;
+    font-size: 4.5vw;
+}
+
+h2
+{
+    background-color: #933fca58;
+    color: #fff;
+    padding: 10px 0;
+    font-size: 2vw;
+    border-radius: 5%;
+}
+
+p
+{
+    color: #fff;
+    padding: 10px 0;
+    font-size: 1.5vw;
+}
+
+
+footer::before
+{
+    content: "all rights reserved";
+}
+
+footer 
+{
+    margin-top: auto; 
+    font-size: 1vw;
+}
+
+ul 
+{
+    list-style: none; 
+}
+li 
+{
+    padding-right: 35px;
+    font-size: 30px;
+}
+
+.dropdown-content 
+{
+    display: none;
+    position: absolute;
+    background-color: #933fca58;
+    width:fit-content;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content 
+{
+    display: block;
+    position: relative;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+.dropdown-content a 
+{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+
+.dropdown-content a:hover 
+{
+    background-color: #933fca58;
+}
+
+@media (max-width: 800px) 
+{
+    body 
+    {
+        font-size: 14px;
+    }
+}
+
+
+a:link 
+{
+    color: #ffffff;
+}
+  
+a:visited 
+{
+    color: #933fca58;
+}
+  
+  
+a:hover 
+{
+    color: rgb(207, 57, 240);
+}
+  
+a:active 
+{
+    color: rgb(255, 255, 255);
+}
+
+button
+{
+    background-color: #933fca; 
+    color: #fff; 
+    padding: 10px 20px;
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    font-family: Neuropol; 
+}
+
+.button:hover
+{
+    background-color: rgb(207, 57, 240);
+}
+
+#veziCosul:hover
+{
+    background-color: rgb(207, 57, 240);
+}
+
+.buton_cos:hover
+{
+    background-color: rgb(207, 57, 240);
+}
+
+.produs
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: transform 0.3s ease;
+}
+.produs img
+{
+    max-width: 40%; 
+    height: auto;
+}
+.produs:hover
+{
+    transform: scale(0.9);
+}
+
+.produs:nth-of-type(odd) .detalii .culoare::after
+{
+    content: "alb"
+}
+.produs:nth-of-type(even) .detalii .culoare::after
+{
+    content: "negru"
+}
+.detalii
+{
+    flex-grow: 1;
+}
+
+.detalii h2 
+{
+    margin-top: 0; 
+}
+.detalii p 
+{
+    margin: 5px 0;
+}
+
+#sabii
+{
+    max-width: 50%;
+    height: auto; 
+    display: block;
+    margin: 0 auto;
+    animation: rotatie 10s linear infinite; 
+}
+
+@keyframes rotatie
+{
+    from {
+        transform: rotate(0deg); 
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes blink 
+{
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.soon 
+{
+    color: #933fca;
+    animation: blink 2s infinite; 
+}
+
+#cos_cumparaturi ul 
+{
+    list-style-type: none;
+    padding: 0;
+}
+
+#cos_cumparaturi li 
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: transform 0.3s ease;
+}
+
+#cos_cumparaturi li:hover
+{
+    transform: scale(0.9);
+}
+#cos_cumparaturi img 
+{
+    max-width: 30%; 
+    height: auto;
+}
+
+#buton_home 
+{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #933fca;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: Neuropol;
+}
+
+
+#Mesaje p 
+{
+    color: red;
+}
+
+input[type="email"].valid,
+input[type="password"].valid 
+{
+    border-color: green;
+}
+input[type="email"].invalid,
+input[type="password"].invalid 
+{
+    border-color: red;
+}
+
+
+#mesajConfirmare 
+{
+    position: fixed;
+    top: 2vw;
+    right: 2vw;
+    background-color: #147b23; 
+    color: white;
+    padding: 2vw;
+    border-radius: 5px;
+    z-index: 1000; 
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+#mesajConfirmare.show 
+{
+    opacity: 1;
+}
+
+#counter 
+{
+    margin-top: 20px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#countdown 
+{
+    font-size: 2.5vw;
+    background-size: auto;
+    background-color: #933fca58;
+    width: fit-content;
+    margin: 0 auto;
+    
+}
+
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<head>
+    <title>hanorace</title>
+    <link rel = "stylesheet" href = "proiect.css" type = "text/css">
+    <link rel="icon" type="image/x-icon" href="poze/star.png">
+    
+</head>
+<body>
+    <header>
+        Hanorace
+    </header>
+
+    <main> 
+        <button id="arataSlider">Filtreaza dupa pret</button>
+        <div id="sliderContainer" style="display: none;">
+            <label for="priceRange">Filtreaza după pret: <span id="priceValue">0</span> RON</label><br>
+            <input type="range" id="priceRange" min="0" max="1000" step="50" value="1000"><br>
+        </div>   
+            
+            <div class="produs" nume = "Hanorac 1" pret = "350" poza = "poze/hanorac1.png">
+                <h2>Hanorac 1</h2>
+                <img src="poze/hanorac1.png" >
+                <div class="detalii">
+                    <p>Descriere hanorac: <span class="culoare"><br>Culoare: </span></p>
+                    <p>Pret: 350 RON</p>
+                    <button class="buton_cos">Adauga in cos</button>
+                </div>
+            </div>
+            <div class="produs" nume = "Hanorac 2" pret = "320" poza = "poze/hanorac2.png">
+                <h2>Hanorac 2</h2>
+                <img src="poze/hanorac2.png">
+                <div class="detalii">
+                    <p>Descriere hanorac: <span class="culoare"><br>Culoare: </span></p>
+                    <p>Pret: 320 RON</p>
+                    <button class="buton_cos">Adauga in cos</button>
+                </div>
+            </div>
+        <button id="veziCosul" onclick="window.location.href='cos.html'">Vezi cosul</button><br> 
+        <div id="mesajConfirmare" style="display: none;">Produs adaugat in cos!</div><br>   
+        <a href="home.html">Inapoi acasa</a><br>
+                   
+  
+
+    </main>
+    <footer>
+        <br>EST.2024
+    </footer>
+    <script src="proiect.js"></script>
+</body>
+</html>
